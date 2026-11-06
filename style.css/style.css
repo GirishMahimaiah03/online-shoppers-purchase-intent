@@ -1,0 +1,65 @@
+/* Custom styling for the Shopper Intent - Model Evaluator app. */
+
+/* Tighten the default top padding so the title sits closer to the header. */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Sidebar panel background and spacing. */
+[data-testid="stSidebar"] {
+    background-color: #f3f6fb;
+    border-right: 1px solid #e2e8f0;
+}
+[data-testid="stSidebar"] h2 {
+    color: #2563eb;
+}
+
+/* Metric cards: give each metric a bordered, shadowed "card" look. */
+[data-testid="stMetric"] {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0.75rem 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+[data-testid="stMetricLabel"] {
+    font-weight: 600;
+    color: #475569;
+}
+[data-testid="stMetricValue"] {
+    color: #2563eb;
+}
+
+/* Bordered containers (confusion matrix / classification report / metrics row). */
+[data-testid="stVerticalBlockBorderWrapper"] {
+    border-radius: 12px;
+}
+
+/* Dataframes / tables: rounded corners to match the rest of the UI. */
+[data-testid="stDataFrame"] {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Buttons (download button, file uploader "Browse files" button). */
+.stButton > button,
+[data-testid="stDownloadButton"] > button,
+[data-testid="stBaseButton-secondary"] {
+    border-radius: 8px;
+    font-weight: 600;
+}
+[data-testid="stDownloadButton"] > button:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+/* File uploader dropzone. */
+[data-testid="stFileUploaderDropzone"] {
+    border-radius: 10px;
+}
+
+/* Section dividers with a touch more breathing room. */
+hr {
+    margin: 1.25rem 0;
+}
