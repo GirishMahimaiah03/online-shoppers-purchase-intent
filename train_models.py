@@ -2,19 +2,6 @@
 ML Assignment 2 - Model training and evaluation
 Dataset: UCI Online Shoppers Purchasing Intention Dataset
 
-Run:
-    python train_models.py --data online_shoppers_intention.csv
-
-The script:
-1. Reads the original CSV without deleting duplicate observations.
-2. Separates the 17 input features from the Revenue target.
-3. Keeps identical feature rows in the same partition using
-   StratifiedGroupKFold.
-4. Fits preprocessing only on the training partition.
-5. Trains the five classifiers required by the assignment.
-6. Calculates the six required evaluation metrics on one common test set.
-7. Saves complete preprocessing + model pipelines for Streamlit deployment.
-8. Saves test_data.csv containing test features and the target.
 """
 
 import os
@@ -43,7 +30,7 @@ from sklearn.tree import DecisionTreeClassifier
 # Set a fixed random seed to ensure reproducible training and testing results.
 SEED = 42
 # Load the original dataset and preprocess it into input features and target values.
-raw = pd.read_csv("online_shoppers_intention.csv")
+raw = pd.read_csv("data/online_shoppers_intention.csv")
 X, y = prepare(raw)
 
 # Split the dataset into 80% training and 20% testing while maintaining
